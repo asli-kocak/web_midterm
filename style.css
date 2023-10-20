@@ -1,0 +1,43 @@
+html{
+    background-color: rgb(254, 245, 254);
+}
+
+img.logo {
+    display: block; /* This makes the image a block element to center it horizontally */
+    margin: 0 auto;  /* Auto margin for left and right centers it horizontally */
+    width: 20%;     /* Set the width as desired */
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav {
+  overflow: hidden;
+  background-color: #e4901b;
+  text-align: center;
+  margin-left: 22%;
+  margin-right: 22%;
+  border-radius: 10px;
+  
+}
+
+.nav a {
+  float:left;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.nav a:hover {
+  background-color: #ac1818;
+  color: rgb(255, 255, 255);
+}
+
+.nav a.active {
+  background-color: #c71f1f;
+  color: white;
+}
+
