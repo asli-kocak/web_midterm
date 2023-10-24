@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            padding: 0;
+        }
+        .content {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333; 
+        }
+
+        .filters {
+            width: 40%;
+            justify-content: center;
+            background-color: white;
+            padding: 20px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .product {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 20px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 15%;
+        }
+
+        .product img {
+            height: 100px;
+        }
+
+        @media (max-width: 768px) {
+            .product {
+                width: 85%;
+                font-size: 20px;
+            }
+            .filters {
+                width: 85%;
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="index.html" target="_self">
+            <img class="logo" src="logo.png" alt="Your Logo">
+        </a>
+    </div>
+
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="about_us.html">Our Story</a>
+        <a href="kids.html">Kids Toys</a>
+        <a href="vintage.html">Vintage Toys</a>
+        <a class="active" href="collectibles.html">Collectibles</a>
+        <a href="contact_us.html">Contact</a>
+        <a href="location.html">Location</a>
+        <a href="faqs.html">FAQ's</a>
+    </div>
+
+    <div class="content">
+        <h1>Collectibles Toys</h1>
+
+        <div class="filters">
+            <h2>Filter</h2>
+            <label for="category-filter">Categories:</label>
+            <select id="category-filter">
+                <option value="all">All</option>
+                <option value="Sports">Sports</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Coins">Coins</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <ul class="product-list">
+            <li class="product">
+                <img src="product_imgs/collectible.jpg" alt="Toy 1">
+                <h3>Collectible Name 1</h3>
+                <p>Category: </p>
+                <p>Price: </p>
+            </li>
+
+            <li class="product">
+                <img src="product_imgs/collectible.jpg" alt="Toy 2">
+                <h3>Collectible Name 2</h3>
+                <p>Category: </p>
+                <p>Price: </p>
+            </li>
+
+            <li class="product">
+                <img src="product_imgs/collectible.jpg" alt="Toy 3">
+                <h3>Collectible Name 3</h3>
+                <p>Category: </p>
+                <p>Price: </p>
+            </li>
+
+            <li class="product">
+                <img src="product_imgs/collectible.jpg" alt="Toy 1">
+                <h3>Collectible Name 4</h3>
+                <p>Category: </p>
+                <p>Price: </p>
+            </li>
+
+            <li class="product">
+                <img src="product_imgs/collectible.jpg" alt="Toy 1">
+                <h3>Collectible Name 5</h3>
+                <p>Category: </p>
+                <p>Price: </p>
+            </li>
+
+            <li class="product">
+                <img src="product_imgs/collectible.jpg" alt="Toy 1">
+                <h3>Collectible Name 6</h3>
+                <p>Category: </p>
+                <p>Price: </p>
+            </li>
+
+            <li class="product">
+                <img src="product_imgs/collectible.jpg" alt="Toy 1">
+                <h3>Collectible Name 7</h3>
+                <p>Category: 0-2</p>
+                <p>Price: </p>
+            </li>
+
+            <li class="product">
+                <img src="product_imgs/collectible.jpg" alt="Toy 1">
+                <h3>Collectible Name 1</h3>
+                <p>Category: </p>
+                <p>Price: </p>
+            </li>
+
+            <li class="product">
+                <img src="product_imgs/collectible.jpg" alt="Toy 2">
+                <h3>Collectible Name 2</h3>
+                <p>Category: </p>
+                <p>Price: </p>
+            </li>
+
+            <li class="product">
+                <img src="product_imgs/collectible.jpg" alt="Toy 3">
+                <h3>Collectible Name 3</h3>
+                <p>Category: </p>
+                <p>Price: </p>
+            </li>
+
+            <li class="product">
+                <img src="product_imgs/collectible.jpg" alt="Toy 1">
+                <h3>Collectible Name 4</h3>
+                <p>Category: Sports</p>
+                <p>Price: </p>
+            </li>
+
+            <li class="product">
+                <img src="product_imgs/collectible.jpg" alt="Toy 1">
+                <h3>Collectible Name 5</h3>
+                <p>Category: </p>
+                <p>Price: </p>
+            </li>
+
+            <li class="product">
+                <img src="product_imgs/collectible.jpg" alt="Toy 1">
+                <h3>Collectible Name 6</h3>
+                <p>Category: 1980s</p>
+                <p>Price: </p>
+            </li>
+
+            <li class="product">
+                <img src="product_imgs/collectible.jpg" alt="Toy 1">
+                <h3>Collectible Name 7</h3>
+                <p>Category: </p>
+                <p>Price: </p>
+            </li>
+        </ul>
+    </div>
+    <script>
+        const filter = document.getElementById('category-filter');
+        const productList = document.querySelector('.product-list');
+    
+        filter.addEventListener('change', filterProducts);
+    
+        function filterProducts() {
+            const selectedCategory = filter.value;
+            const products = productList.querySelectorAll('.product');
+    
+            products.forEach(product => {
+                const category = product.querySelector('p:nth-child(3)').textContent;
+                if (selectedCategory == 'all' || ("Category: " + selectedCategory) == category) {
+                    product.style.display = 'block'; 
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -41,3 +41,17 @@ body {
   color: white;
 }
 
+@media (max-width: 768px) {
+  img.logo {
+    width: 80%;
+  }
+  body {
+    justify-content: center;
+  }
+  .nav {
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
