@@ -85,7 +85,7 @@
 
     <div class="content">
         <h1>Kids' Toys</h1>
-
+        <!-- Filter Bar to choose Age -->
         <div class="filters">
             <h2>Filter</h2>
             <label for="age-filter">Age:</label>
@@ -96,7 +96,7 @@
                 <option value="6-10">6-10 years</option>
             </select>
         </div>
-
+        <!-- Products List with each li as a product -->
         <ul class="product-list">
             <li class="product">
                 <img src="product_imgs/kids_toy.jpg" alt="Toy 1">
@@ -118,7 +118,7 @@
                 <p>Age Range: </p>
                 <p>Price: </p>
             </li>
-
+            <!-- Note: The Age range should be formatted to be matching one of the filter val -->
             <li class="product">
                 <img src="product_imgs/kids_toy.jpg" alt="Toy 1">
                 <h3>Toy Name 4</h3>
@@ -197,7 +197,10 @@
             </li>
         </ul>
     </div>
+
+
     <script>
+        // JS to filter products based on the text content of each product
         const filter = document.getElementById('age-filter');
         const productList = document.querySelector('.product-list');
     
