@@ -2,6 +2,10 @@ html{
     background-color: rgb(254, 245, 254);
 }
 
+h1 {
+  color: #333; 
+}
+
 img.logo {
     display: block; /* This makes the image a block element to center it horizontally */
     margin: 0 auto;  /* Auto margin for left and right centers it horizontally */
@@ -41,6 +45,7 @@ body {
   color: white;
 }
 
+
 @media (max-width: 768px) {
   img.logo {
     width: 80%;
@@ -54,4 +59,5 @@ body {
     margin-right: 5%;
   }
 }
+
 
