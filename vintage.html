@@ -141,25 +141,28 @@
             </li>
         </ul>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        const filter = document.getElementById('period-filter');
-        const productList = document.querySelector('.product-list');
-    
-        filter.addEventListener('change', filterProducts);
-    
-        function filterProducts() {
-            const selectedPeriod = filter.value;
-            const products = productList.querySelectorAll('.product');
-    
-            products.forEach(product => {
-                const period = product.querySelector('p:nth-child(3)').textContent;
-                if (selectedPeriod == 'all' || ("Time Period: " + selectedPeriod) == period) {
-                    product.style.display = 'block'; 
-                } else {
-                    product.style.display = 'none';
-                }
-            });
-        }
+        $(document).ready(function () {
+            const filter = $('#period-filter');
+            const productList = $('.product-list');
+        
+            filter.on('change', filterProducts);
+        
+            function filterProducts() {
+                const selectedPeriod = filter.val();
+                const products = productList.find('.product');
+        
+                products.each(function() {
+                    const period = $(this).find('p:nth-child(3)').text();
+                    if (selectedPeriod == 'all' || ("Time Period: " + selectedPeriod) == period) {
+                        $(this).fadeIn();
+                    } else {
+                        $(this).fadeOut();
+                    }
+                });
+            }
+        });
     </script>
 </body>
 </html>
