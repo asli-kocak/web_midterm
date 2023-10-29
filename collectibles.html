@@ -142,25 +142,28 @@
             </li>
         </ul>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        const filter = document.getElementById('category-filter');
-        const productList = document.querySelector('.product-list');
-    
-        filter.addEventListener('change', filterProducts);
-    
-        function filterProducts() {
-            const selectedCategory = filter.value;
-            const products = productList.querySelectorAll('.product');
-    
-            products.forEach(product => {
-                const category = product.querySelector('p:nth-child(3)').textContent;
-                if (selectedCategory == 'all' || ("Category: " + selectedCategory) == category) {
-                    product.style.display = 'block'; 
-                } else {
-                    product.style.display = 'none';
-                }
-            });
-        }
+        $(document).ready(function() { 
+            const filter = $('#category-filter');
+            const productList = $('.product-list');
+        
+            filter.on('change', filterProducts);
+        
+            function filterProducts() {
+                const selectedCategory = filter.val();
+                const products = productList.find('.product');
+        
+                products.each(function {
+                    const category = $(this).find('p:nth-child(3)').text();
+                    if (selectedCategory == 'all' || ("Category: " + selectedCategory) == category) {
+                        $(this).fadeIn();
+                    } else {
+                        $(this).fadeOut();
+                    }
+                });
+            }
+        });
     </script>
 </body>
 </html>
