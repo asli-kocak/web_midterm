@@ -144,12 +144,13 @@
         filter.addEventListener('change', filterProducts);
     
         function filterProducts() {
+            val_arr = {"0-2": "Age Range: 0-2", "3-5": "Age Range: 3-5", "6-10": "Age Range: 6-10"}
             const selectedAge = filter.value;
             const products = productList.querySelectorAll('.product');
     
             products.forEach(product => {
                 const ageRange = product.querySelector('p:nth-child(3)').textContent;
-                if (selectedAge == 'all' || ("Age Range: " + selectedAge) == ageRange) {
+                if (selectedAge == 'all' || val_arr[selectedAge] == ageRange) {
                     product.style.display = 'block'; 
                 } else {
                     product.style.display = 'none';
