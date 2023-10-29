@@ -135,28 +135,29 @@
         </ul>
     </div>
 
-
-    <script>
-        // JS to filter products based on the text content of each product
-        const filter = document.getElementById('age-filter');
-        const productList = document.querySelector('.product-list');
-    
-        filter.addEventListener('change', filterProducts);
-    
-        function filterProducts() {
-            val_arr = {"0-2": "Age Range: 0-2", "3-5": "Age Range: 3-5", "6-10": "Age Range: 6-10"}
-            const selectedAge = filter.value;
-            const products = productList.querySelectorAll('.product');
-    
-            products.forEach(product => {
-                const ageRange = product.querySelector('p:nth-child(3)').textContent;
-                if (selectedAge == 'all' || val_arr[selectedAge] == ageRange) {
-                    product.style.display = 'block'; 
-                } else {
-                    product.style.display = 'none';
-                }
-            });
-        }
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js">
+        $(document).ready(function() {
+            // JS to filter products based on the text content of each product
+            const filter = $('.age-filter');
+            const productList = $('.product-list');
+        
+            filter.on('change', filterProducts);
+        
+            function filterProducts() {
+                val_arr = {"0-2": "Age Range: 0-2", "3-5": "Age Range: 3-5", "6-10": "Age Range: 6-10"}
+                const selectedAge = filter.val;
+                const products = productList.find('.product');
+        
+                products.each(function () {
+                    const ageRange = $(this).find('p:nth-child(3)').text();
+                    if (selectedAge == 'all' || val_arr[selectedAge] == ageRange) {
+                        $(this).fadeIn();
+                    } else {
+                        $(this).fadeOut();
+                    }
+                });
+            }
+        });
     </script>
 </body>
 </html>
