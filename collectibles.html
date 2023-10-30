@@ -154,7 +154,7 @@
                 const selectedCategory = filter.val();
                 const products = productList.find('.product');
         
-                products.each(function {
+                products.each(function() { // Fixed syntax here
                     const category = $(this).find('p:nth-child(3)').text();
                     if (selectedCategory == 'all' || ("Category: " + selectedCategory) == category) {
                         $(this).fadeIn();
@@ -165,5 +165,6 @@
             }
         });
     </script>
+
 </body>
 </html>
